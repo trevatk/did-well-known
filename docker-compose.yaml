@@ -1,0 +1,14 @@
+---
+version: '3.7'
+
+services:
+  did-well-known:
+    image: trevatk/did-well-known:latest
+    container_name: did-well-known
+    restart: unless-stopped
+    ports:
+      - 7171:7171
+    environment:
+      - PORT=7171
+      - DID_CONFIGURATION_FILE=/opt/well-known/did-configuration.json
+    
